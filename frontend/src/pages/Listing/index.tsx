@@ -29,9 +29,13 @@ function Listing() {
             });
     }, [pageNumber]); // sempre que o objeto "[]" mudar ele vai executar a funcao de novo, quando eu mudar o pageNumber ele vai refazer a requisição
 
+    const handlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChange}/>
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
