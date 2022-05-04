@@ -1,15 +1,23 @@
-import { ReactComponent as GithubIcon } from 'assets/img/github.svg'
+import { FaInstagram } from 'react-icons/fa'
+import { BsCartCheckFill } from 'react-icons/bs'
 import './styles.css'
 function NavBar() {
     return (
         <header>
             <nav className="container">
                 <div className="dsmovie-nav-content">
-                    <h1>DSMovie</h1>
-                    <a href="https://github.com/kauanlp">
+                    <div className="dsmovie-icon">
+                        <BsCartCheckFill />
+                        <h1>
+                            PointOfertas
+                        </h1>
+                    </div>
+                    <a href="https://www.instagram.com/pointofertass/">
                         <div className="dsmovie-contact-container">
-                            <GithubIcon />
-                            <p className="dsmovie-contact-link">/kauanlp</p>
+                            <div className="dsmovie-icon">
+                                <FaInstagram />
+                            </div>
+                            <p className="dsmovie-contact-link">/PointOfertas</p>
                         </div>
                     </a>
                 </div>

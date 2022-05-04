@@ -24,6 +24,11 @@ header {
     align-items: center;
 }
 
+.dsmovie-icon {
+    font-size:xx-large;
+    display: flex;
+}
+
 .dsmovie-contact-link {
     margin: 0 0 0 10px;  /*sentido horario*/
     font-size: 12px;

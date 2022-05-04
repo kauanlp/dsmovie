@@ -1,0 +1,13 @@
+.top {
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+.right {
+    display: inline-block;
+    flex-direction: row;
+}
+
+.rating-words {
+    text-transform: uppercase;
+}

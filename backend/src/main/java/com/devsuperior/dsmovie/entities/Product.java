@@ -1,12 +1,12 @@
-package com.devsuperior.dsmovie.dto;
+package com.devsuperior.dsmovie.entities;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import com.devsuperior.dsmovie.entities.Product;
+import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -17,22 +17,16 @@ import lombok.ToString;
 @Setter
 @ToString
 @RequiredArgsConstructor
-public class MovieDTO {
+@Entity
+@Table(name = "tb_product")
+public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Double price;
-    private Date publicationHour;
+    private Date publicationHour = new Date();
     private String image;
     private String link;
-
-    public MovieDTO(Product movie) {
-        id = movie.getId();
-        name = movie.getName();
-        price = movie.getPrice();
-        publicationHour = movie.getPublicationHour();
-        image = movie.getImage();
-        link = movie.getLink();
-    }
 }

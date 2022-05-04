@@ -1,9 +1,10 @@
 export type Movie = {
     id: number;
-    title: string;
-    score: number;
-    count: number;
     image: string;
+    name: string;
+    price: number;
+    publicationHour: string;
+    link: string;
 }
 
 export type MoviePage = {
